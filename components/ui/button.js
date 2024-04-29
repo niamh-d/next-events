@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import classes from "./button.module.css";
+import classes from './button.module.css';
 
-const Button = (props) => {
+function Button(props) {
   if (props.link) {
     return (
       <Link href={props.link} className={classes.btn}>
@@ -12,10 +12,10 @@ const Button = (props) => {
   }
 
   return (
-    <button className={classes.button} onClick={props.oncClick}>
+    <button className={classes.btn} onClick={props.onClick}>
       {props.children}
     </button>
   );
-};
+}
 
 export default Button;

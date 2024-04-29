@@ -1,7 +1,5 @@
 .list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 20px;
-  max-width: 70rem;
+  width: 90%;
+  max-width: 40rem;
   margin: 5rem auto;
 }

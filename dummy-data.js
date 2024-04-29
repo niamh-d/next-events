@@ -1,71 +1,32 @@
 const DUMMY_EVENTS = [
   {
-    id: "e1",
-    title: "Coding for beginners",
+    id: 'e1',
+    title: 'Programming for everyone',
     description:
-      "Everyone can learn to code! Yes, everyone! In this event, you'll be introduced to the basics of coding and you'll get to write your first lines of code in the popular language Python.",
-    location: "111 Brixton Hill, London SW2 1AA",
-    date: "2023-03-20",
-    image: "images/coding.jpg",
-    isFeatured: true,
-  },
-  {
-    id: "e2",
-    title: "Networking for extroverts",
-    description:
-      "You probably need no help with networking in general. But knowing where to focus one's efforts is always a good skill to practice.",
-    location: "136 Shoreditch High St, London E1 6JE",
-    date: "2023-04-04",
-    image: "images/networking.jpg",
-    isFeatured: true,
-  },
-  {
-    id: "e3",
-    title: "Women in Tech Meetup",
-    description: "Network with and learn from other women in tech.",
-    location: "17 The Pavement, London SW4 0HY",
-    date: "2023-04-07",
-    image: "images/tech-women.jpg",
-    isFeatured: true,
-  },
-  {
-    id: "e4",
-    title: "Networking for introverts",
-    description:
-      "We know networking is no fun if you're an introvert. That's why we've put together this event – it'll be fun. Promise!",
-    location: "17 The Pavement, London SW4 0HY",
-    date: "2023-05-17",
-    image: "images/chatting.jpg",
+      'Everyone can learn to code! Yes, everyone! In this live event, we are going to go through all the key basics and get you started with programming as well.',
+    location: 'Somestreet 25, 12345 San Somewhereo',
+    date: '2021-05-12',
+    image: 'images/coding-event.jpg',
     isFeatured: false,
   },
   {
-    id: "e5",
-    title: "Language exchange",
+    id: 'e2',
+    title: 'Networking for introverts',
     description:
-      "Come and speak different languages with like-minded lingophiles!",
-    location: "111 Brixton Hill, London SW2 1AA",
-    date: "2023-05-20",
-    image: "images/lang-meetup.jpg",
-    isFeatured: false,
+      "We know: Networking is no fun if you are an introvert person. That's why we came up with this event - it'll be so much easier. Promised!",
+    location: 'New Wall Street 5, 98765 New Work',
+    date: '2021-05-30',
+    image: 'images/introvert-event.jpg',
+    isFeatured: true,
   },
   {
-    id: "e6",
-    title: "German Language Meetup",
+    id: 'e3',
+    title: 'Networking for extroverts',
     description:
-      "Willkommen! Meet other learners of German to practice your conversational skills. All welcome!",
-    location: "17 The Pavement, London SW4 0HY",
-    date: "2023-05-12",
-    image: "images/german.jpg",
-    isFeatured: false,
-  },
-  {
-    id: "e7",
-    title: "French Language Meetup",
-    description:
-      "Bienvenue! Meet other Francophiles to practice your French language skills. All skill levels welcome!",
-    location: "17 The Pavement, London SW4 0HY",
-    date: "2023-06-14",
-    image: "images/french.jpg",
+      'You probably need no help with networking in general. But focusing your energy correctly - that is something where most people can improve.',
+    location: 'My Street 12, 10115 Broke City',
+    date: '2022-04-10',
+    image: 'images/extrovert-event.jpg',
     isFeatured: true,
   },
 ];
@@ -83,9 +44,7 @@ export function getFilteredEvents(dateFilter) {
 
   let filteredEvents = DUMMY_EVENTS.filter((event) => {
     const eventDate = new Date(event.date);
-    return (
-      eventDate.getFullYear() === year && eventDate.getMonth() === month - 1
-    );
+    return eventDate.getFullYear() === year && eventDate.getMonth() === month - 1;
   });
 
   return filteredEvents;
